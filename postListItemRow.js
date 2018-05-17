@@ -1,5 +1,5 @@
 import React from 'react'
-import {TouchableOpacity, StyleSheet, Text, View, Image, Linking} from 'react-native'
+import {TouchableOpacity, StyleSheet, Text, View, Image, Linking, Dimensions} from 'react-native'
 
 
 const styles = StyleSheet.create({
@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     fontSize: 15,
     fontWeight: 'bold',
-
   }
 })
 
@@ -31,7 +30,7 @@ const Row = props => (
       <Text numberOfLines={2} style={styles.titleText} >{props.title}</Text>
     </View>
     <Image
-      style={{width: 300, height: 150}}
+      style={{width: 320, height: 150}}
       source={{uri: props.thumbnailUrl}}
     />
   </TouchableOpacity>
