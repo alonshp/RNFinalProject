@@ -2,7 +2,7 @@ const processPost = post => ({
   thumbnailUrl: post.thumbnail,
   title: post.document.title,
   url: post.document.url,
-  siteLogoUrl: post.document.site.logos['150x150']
+  siteLogoUrl: post.document.site.logos['150x150'],
 })
 
 export const fetchFeed = async () => {
