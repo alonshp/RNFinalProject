@@ -4,13 +4,13 @@ import { StyleSheet, Text, View} from 'react-native';
 import FlatListFeed from './flatListFeed';
 import { Constants } from 'expo';
 import {Provider} from 'react-redux';
-import store from './redux/store'
+import configureStore from './redux/store'
 import FeedScreen from './screens/FeedScreen'
 
 export default class App extends React.Component {
   render() {
     return (
-      <Provider store={store}>
+      <Provider store={configureStore()}>
         <FeedScreen />
       </Provider>
     );

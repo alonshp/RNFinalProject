@@ -1,23 +1,17 @@
 import React from 'react';
-import {fetchFeed} from '../api'
 import { StyleSheet, View} from 'react-native';
 import FlatListFeed from '../flatListFeed';
 import {Constants} from 'expo';
 import {connect} from 'react-redux'
-import {updateFeedContent} from '../redux/actions'
+import {fetchFeedAction} from '../redux/actions'
 
 class FeedScreen extends React.Component {
   componentDidMount() {
-    this.getPosts()
-    // TODO dispatch action to get feed
-  }
-
-  getPosts = async () => {
-    const results = await fetchFeed()
-    this.props.updateFeedContent(results)
+    this.props.fetchFeedAction()
   }
 
   render() {
+    console.log("inside feedscreen");
     return (
       <View style={styles.container}>
         {this.props.feed !== [] } && (
@@ -42,4 +36,4 @@ const mapStateToProps = state => ({
   feed: state.feed,
 })
 
-export default connect(mapStateToProps, {updateFeedContent: updateFeedContent})(FeedScreen)
+export default connect(mapStateToProps, {fetchFeedAction: fetchFeedAction})(FeedScreen)
