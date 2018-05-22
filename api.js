@@ -13,5 +13,6 @@ export const fetchFeed = async () => {
       headers: {Authorization: 'API_KEY c2e75315550543fdbf0a85e9a96a458e'},
     })
     const results = await response.json()
-    return results.items.map(processPost)
+    let resultsArray = results.items.map(processPost)
+    return resultsArray
 }
