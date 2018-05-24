@@ -1,6 +1,6 @@
-import { createLogic } from 'redux-logic';
-import {fetchFeed} from '../api'
-import {fetchErrorAction, updateFeedContent, FETCH_FEED} from './actions'
+import {createLogic} from 'redux-logic';
+import {fetchFeed} from '../Api'
+import {fetchErrorAction, updateFeedContent, FETCH_FEED} from './Actions'
 
 
 export const fetchLogic = createLogic({

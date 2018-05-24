@@ -1,6 +1,6 @@
 import React from 'react'
 import {FlatList, View} from 'react-native'
-import Row from './postListItemRow'
+import Row from './PostListItemRow'
 
 const renderItem = ({item}) => <Row {...item} />
 

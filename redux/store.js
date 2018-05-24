@@ -1,7 +1,7 @@
 import {createStore, applyMiddleware} from 'redux'
 import {createLogicMiddleware} from 'redux-logic'
-import reducer from './reducer'
-import logic from './logic';
+import reducer from './Reducer'
+import logic from './Logic';
 
 const deps = { // injected dependencies for logic
   // none needed

@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, Text, ActivityIndicator,Alert} from 'react-native';
-import FlatListFeed from '../flatListFeed';
+import {StyleSheet, View, Text, ActivityIndicator,Alert} from 'react-native';
+import FlatListFeed from '../FlatListFeed';
 import {Constants} from 'expo';
 import {connect} from 'react-redux'
-import {fetchFeedAction, cleanErrorAction} from '../redux/actions'
+import {fetchFeedAction, cleanErrorAction} from '../redux/Actions'
 
 const showAlert = (err) => {
     Alert.alert(

@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux'
-import {UPDATE_FEED, FETCH_ERR, CLEAN_ERR, FETCH_FEED} from './actions'
+import {UPDATE_FEED, FETCH_ERR, CLEAN_ERR, FETCH_FEED} from './Actions'
 
 const merge = (prev, next) => Object.assign({}, prev, next)
 
